@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="13.7440" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2022-08-01T20:26:16" tests="0" file="cypress/e2e/spec.cy.js" time="0.0000" failures="0">
-  </testsuite>
-  <testsuite name="Performance: login and initial map load" timestamp="2022-08-01T20:26:16" tests="1" time="13.7220" failures="0">
-    <testcase name="Performance: login and initial map load C162049: should load initial map within Lighthouse threshold" time="13.7010" classname="C162049: should load initial map within Lighthouse threshold">
-    </testcase>
-  </testsuite>
-</testsuites>
