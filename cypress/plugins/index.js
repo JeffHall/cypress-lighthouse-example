@@ -12,20 +12,8 @@ module.exports = (on, config) => {
       const lighthouseTask = lighthouse((lighthouseReport) => {
         let lighthouseScoreText = ''
         let lighthouseResult = lighthouseReport?.lhr?.categories
-        let lighthousePerformance =
-          'Performance: ' + lighthouseResult?.performance?.score + '\n'
-        let lighthouseAccessibility =
-          'Accessibility: ' + lighthouseResult?.accessibility?.score + '\n'
-        let lighthouseBestPractices =
-          'Best Practices: ' +
-          lighthouseResult?.['best-practices']?.score +
-          '\n'
-        let lighthouseSEO = 'SEO: ' + lighthouseResult?.seo?.score + '\n'
-        lighthouseScoreText =
-          lighthousePerformance +
-          lighthouseAccessibility +
-          lighthouseBestPractices +
-          lighthouseSEO
+        let lighthousePerformance = 'Performance: ' + (lighthouseResult?.performance?.score * 100) + '\n'
+        lighthouseScoreText = lighthousePerformance
 
         console.log(lighthouseScoreText)
         txt = lighthouseScoreText

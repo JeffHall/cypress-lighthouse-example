@@ -27,9 +27,6 @@ it('shows the text report returned by from the plugins task', () => {
 
   const thresholds = {
     performance: 50,
-    accessibility: 90,
-    'best-practices': 80,
-    seo: 80,
   }
   const opts = {
     formFactor: 'desktop',
@@ -53,5 +50,7 @@ it('shows the text report returned by from the plugins task', () => {
       const { errors, results, txt } = report
       // our custom code in the plugins file has summarized the report
       cy.log(report.txt)
+      // cy.writeFile('perf_log.txt', 'This is the performance test log file')
+      cy.writeFile('perf_log.txt', report.txt)
     })
 })
