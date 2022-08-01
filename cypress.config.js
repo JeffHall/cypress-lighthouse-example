@@ -8,6 +8,14 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       return require('./cypress/plugins/index.js')(on, config)
     },
-    baseUrl: 'https://glebbahmutov.com/blog',
+    baseUrl: 'https://sc-integration.skylight.earth',
   },
+
+  reporter: 'cypress-multi-reporters',
+  reporterOptions: {
+    configFile: 'reporter-config.json',
+  },
+  screenshotOnRunFailure: false,
+  video: false,
+
 })

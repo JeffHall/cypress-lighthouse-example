@@ -12,7 +12,7 @@ module.exports = (on, config) => {
       const lighthouseTask = lighthouse((lighthouseReport) => {
         let lighthouseScoreText = ''
         let lighthouseResult = lighthouseReport?.lhr?.categories
-        let lighthousePerformance = 'Performance: ' + (lighthouseResult?.performance?.score * 100) + '\n'
+        let lighthousePerformance = (lighthouseResult?.performance?.score * 100) + '\n'
         lighthouseScoreText = lighthousePerformance
 
         console.log(lighthouseScoreText)
